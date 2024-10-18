@@ -8,7 +8,7 @@ function SideBarAdmin() {
     {
       key: "home",
       label: "Home Page",
-      onClick: () => navigate("/admin"),
+      onClick: () => navigate("/"),
     },
     {
       key: "financial",
@@ -42,12 +42,13 @@ function SideBarAdmin() {
           icon: <RightOutlined />,
           label: "Company Maintenance",
         },
+        {
+          key: "dayoff",
+          icon: <RightOutlined />,
+          label: "Manage Dayoff",
+          onClick: () => navigate("/dayoff"),
+        },
       ],
-    },
-    {
-      key: "managedayoff",
-      label: "Manage Dayoff",
-      onClick: () => navigate("/mdayoff"),
     },
   ];
   return (
