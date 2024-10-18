@@ -12,16 +12,24 @@ function SideBarAdmin() {
       label: "Home Page",
     },
     {
-      key: "financial",
-      label: "Financial Management",
+      key: "personal",
+      label: "Personal information",
     },
     {
-      key: "humanrsc",
-      label: "Human Resources Management",
+      key: "contract",
+      label: "Contract",
     },
     {
-      key: "asset",
-      label: "Asset Management",
+      key: "request",
+      label: "Request a maintenance",
+    },
+    {
+      key: "register",
+      label: "Register utilities",
+    },
+    {
+      key: "pay",
+      label: "Pay",
       children: [
         {
           key: "g1",
@@ -37,16 +45,6 @@ function SideBarAdmin() {
           key: "service-contracts",
           icon: <RightOutlined />,
           label: "Service Contracts",
-          children: [
-            {
-              key: "list-employee-contract",
-              label: "List Employee Contracts",
-            },
-            {
-              key: "add-contract",
-              label: "Add Contract",
-            },
-          ],
         },
         {
           key: "g4",
@@ -54,6 +52,14 @@ function SideBarAdmin() {
           label: "Company Maintenance",
         },
       ],
+    },
+    {
+      key: "notification",
+      label: "Notification",
+    },
+    {
+      key: "logout",
+      label: "Log out",
     },
   ];
 
