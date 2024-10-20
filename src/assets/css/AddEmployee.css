@@ -1,0 +1,63 @@
+.employee-wrapper {
+  margin-left: 12px;
+  height: 100%;
+  margin-top: 12px;
+}
+
+.employee-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-left: 12px;
+  margin-bottom: 18px;
+}
+
+.employee-container {
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border: 1px solid #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-add {
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 24px 0;
+}
+
+.employee-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-form-item-control-input-content {
+  display: flex;
+}
+
+.ant-checkbox-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 24px;
+}
+
+.employee-actions {
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+}
+
+.employee-btn {
+  height: 38px;
+  width: 102px;
+  background-color: #34c759;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}

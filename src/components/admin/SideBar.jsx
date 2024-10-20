@@ -1,7 +1,7 @@
 import { Menu } from "antd";
 import { useNavigate } from "react-router-dom";
 import { RightOutlined } from "@ant-design/icons";
-import "./SideBar.css";
+import "../../assets/css/SideBar.css";
 
 function SideBarAdmin() {
   const navigate = useNavigate();
