@@ -11,8 +11,9 @@ function SideBarAdmin() {
       onClick: () => navigate("/admin"),
     },
     {
-      key: "financial",
-      label: "Financial Management",
+      key: "candidates",
+      label: "Manage Candidates",
+      onClick: () => navigate("/admin/candidates"),
     },
     {
       key: "humanrsc",
@@ -47,7 +48,7 @@ function SideBarAdmin() {
     {
       key: "managedayoff",
       label: "Manage Dayoff",
-      onClick: () => navigate("/mdayoff"),
+      onClick: () => navigate("/admin/dayoff"),
     },
   ];
   return (

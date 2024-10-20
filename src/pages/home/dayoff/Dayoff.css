@@ -1,0 +1,45 @@
+.title{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.dayoff{
+    padding: 25px;
+    background-color: #fff;
+    /* margin: 35px 50px 0px; */
+    margin-left: 35px;
+    height: 558px;
+    width: 95%;
+    border-radius: 25px 0 0;
+    box-shadow: black 5px;
+}
+.d_header{
+    display: flex;
+    padding: 40px;
+}
+.g_date{
+    float: right;
+    width: 47.5%;
+}
+.l_date{
+    font-size: 25px;
+    font-weight: 500;
+}
+.i_date{
+    width: 57%;
+    padding: 10px;
+}
+.g_status{
+    float: right;
+    width: 47.5%;
+}
+.l_status{
+    font-size: 25px;
+    font-weight: 500;
+}
+.i_status{
+    margin-left: 15px; 
+    width: 57%;
+    padding: 10px;
+}
