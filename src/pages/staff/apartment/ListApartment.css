@@ -1,0 +1,128 @@
+.apartment-wrapper {
+  margin-left: 12px;
+  height: 100%;
+  margin-top: 12px;
+}
+
+.apartment-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-left: 12px;
+  margin-bottom: 18px;
+}
+
+.apartment-container {
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border: 1px solid #000;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.apartment-table {
+  margin: 48px 24px 0px;
+}
+
+.apartment-table-action {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.apartment-table-action__management {
+  font-size: 26px;
+  font-weight: 300;
+  color: #374a67;
+}
+
+.apartment-form {
+  padding: 20px;
+}
+
+.apartment-actions {
+  display: flex;
+  justify-content: right;
+  column-gap: 24px;
+}
+
+.apartment-btn {
+  height: 38px;
+  width: 102px;
+  background-color: #34c759;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  float: right;
+}
+
+.delete-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.delete-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.col {
+  flex: 1;
+}
+
+.ant-col-16 {
+  max-width: none !important;
+}
+
+.form-item {
+  margin-bottom: 16px;
+}
+
+.design-upload {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+  color: black;
+  font-weight: 500;
+}
+
+.upload-btn svg {
+  margin-right: 5px;
+}
+
+.view-link {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+.view-link:hover {
+  text-decoration: underline;
+}
+
+.apartment-table-action__add {
+  margin-top: 20px;
+  height: 32px;
+  width: 92px;
+  background-color: #34c759;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -1,7 +1,34 @@
 import { Menu } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import "./SideBar.css";
+import { useNavigate } from "react-router-dom";
 function SideBarAdmin() {
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    console.log(e.key);
+    switch (e.key) {
+      case "home": {
+        navigate("/");
+        break;
+      }
+      case "financial": {
+        // navigate('/')
+        break;
+      }
+      case "technical": {
+        navigate("/staff/equipment");
+        break;
+      }
+      case "apartment": {
+        navigate("/staff/apartment");
+        break;
+      }
+      case "buildinfor": {
+        navigate("/staff/building");
+        break;
+      }
+    }
+  };
   const items = [
     {
       key: "home",
@@ -20,12 +47,24 @@ function SideBarAdmin() {
       label: "Asset Management",
       children: [
         {
-          key: "g1",
+          key: "building",
           icon: <RightOutlined />,
-          label: "Building Information",
+          label: "Building Management",
+          children: [
+            {
+              key: "apartment",
+              icon: <RightOutlined />,
+              label: "Apartment Information",
+            },
+            {
+              key: "buildinfor",
+              icon: <RightOutlined />,
+              label: "Building Information",
+            },
+          ],
         },
         {
-          key: "g2",
+          key: "technical",
           icon: <RightOutlined />,
           label: "Technical Systems",
         },
@@ -45,7 +84,7 @@ function SideBarAdmin() {
   return (
     <div className="sidebar">
       <Menu
-        // onClick={onClick}
+        onClick={(e) => handleClick(e)}
         className="sidebar-menu"
         defaultSelectedKeys={["1"]}
         defaultOpenKeys={["sub1"]}
