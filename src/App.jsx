@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { adminRoutes } from "./routes";
 import AdminLayout from "./layouts/admin/AdminLayout";
-import Profile from "./pages/home/Profile"; // Cập nhật đường dẫn
-import UtilityList from "./pages/home/UtilityList"; // Đường dẫn tới trang UtilityList
+import Profile from "./pages/home/Profile"; 
+import UtilityList from "./pages/home/UtilityList"; 
+import MaintenanceRequest from "./pages/home/MaintenanceRequest";
+import ComplaintList from "./pages/home/ComplaintList";
 import "./App.css";
 
 function App() {
@@ -13,7 +15,7 @@ function App() {
           <Routes>
             {adminRoutes.map((route, index) => {
               const Page = route.component;
-              let Layout = AdminLayout; // Sử dụng AdminLayout cho các route admin
+              let Layout = AdminLayout; 
               return (
                 <Route
                   key={index}
@@ -41,6 +43,24 @@ function App() {
               element={
                 <AdminLayout>
                   <UtilityList />
+                </AdminLayout>
+              } 
+            />
+            {/* Route cho MaintenanceRequestt */}
+            <Route 
+              path="/maintenancerequest" 
+              element={
+                <AdminLayout>
+                  <MaintenanceRequest />
+                </AdminLayout>
+              } 
+            />
+              {/* Route cho ComplaintList */}
+              <Route 
+              path="/complaintlist" 
+              element={
+                <AdminLayout>
+                  <ComplaintList />
                 </AdminLayout>
               } 
             />

@@ -14,7 +14,7 @@ const dataSource = [
     contractNo: '12345',
     startDate: '01/01/2024',
     endDate: '01/01/2025',
-    rate: '$100',
+    rate: '$100',   
   },
   {
     key: '2',
