@@ -1,19 +1,34 @@
 import { Menu } from "antd";
-import { RightOutlined } from "@ant-design/icons";
-import "./SideBar.css";
 import { useNavigate } from "react-router-dom";
+import { RightOutlined } from "@ant-design/icons";
+import "../../assets/css/SideBar.css";
+
 function SideBarAdmin() {
   const navigate = useNavigate();
+  const handleClick = (e) => {
+    switch (e.key) {
+      case "home":
+        navigate("/");
+        break;
+      case "financial":
+        // navigate("/page2");
+        break;
+      case "humanrsc":
+        navigate("/employee");
+        break;
+      default:
+        break;
+    }
+  };
+
   const items = [
     {
       key: "home",
       label: "Home Page",
-      onClick: () => navigate("/admin"),
     },
     {
-      key: "candidates",
-      label: "Manage Candidates",
-      onClick: () => navigate("/admin/candidates"),
+      key: "financial",
+      label: "Financial Management",
     },
     {
       key: "humanrsc",
@@ -45,16 +60,11 @@ function SideBarAdmin() {
         },
       ],
     },
-    {
-      key: "managedayoff",
-      label: "Manage Dayoff",
-      onClick: () => navigate("/admin/dayoff"),
-    },
   ];
   return (
     <div className="sidebar">
       <Menu
-        // onClick={onClick}
+        onClick={handleClick}
         className="sidebar-menu"
         defaultSelectedKeys={["1"]}
         defaultOpenKeys={["sub1"]}

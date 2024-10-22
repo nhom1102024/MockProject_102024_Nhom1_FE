@@ -12,11 +12,12 @@
   padding: 12px 0px 12px 12px !important;
   margin: 0 !important;
   width: 100% !important;
+  height: 60px !important;
 }
 
 .ant-menu-item-selected {
   background-color: #e1e1e1 !important;
-  color: #000;
+  color: #000 !important;
 }
 
 .ant-menu-submenu-title {
@@ -25,6 +26,7 @@
   margin: 0 !important;
   width: 100% !important;
   color: #000 !important;
+  height: 60px !important;
 }
 
 .ant-menu-submenu-selected > .ant-menu-submenu-title {

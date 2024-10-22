@@ -1,10 +1,10 @@
 import { Layout } from "antd";
 import { Icon } from "@iconify/react";
-import "./Header.css";
+import "../../assets/css/Header.css";
 
 const { Header } = Layout;
 
-function HeaderAdmin() {
+function HeaderCustomer() {
   return (
     <Header className="header">
       <div className="header-logo">
@@ -32,7 +32,7 @@ function HeaderAdmin() {
               src="https://placehold.co/100x100?text=NoImage"
               alt=""
             />
-            <p className="header-profile__name">Admin</p>
+            <p className="header-profile__name">User</p>
             <Icon className="header-profile__icon" icon="lsicon:down-filled" />
           </div>
           <div className="header-actions">
@@ -49,4 +49,4 @@ function HeaderAdmin() {
   );
 }
 
-export default HeaderAdmin;
+export default HeaderCustomer;
