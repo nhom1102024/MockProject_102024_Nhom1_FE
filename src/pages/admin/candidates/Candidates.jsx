@@ -8,7 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Button, Form, Modal, Space, Table, Input } from "antd";
 
-const candidates = () => {
+const Candidates = () => {
   const [form] = Form.useForm();
   const [clientReady, setClientReady] = useState(false);
   // To disable submit button at the beginning.
@@ -218,4 +218,4 @@ const candidates = () => {
   );
 };
 
-export default candidates;
+export default Candidates;

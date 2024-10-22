@@ -1,6 +1,6 @@
 import React from "react";
-import "./Dayoff.css";
-import { Table } from "antd";
+import "../../../assets/css/Dayoff.css";
+import { Select, Space, Table } from "antd";
 import { AndroidOutlined, ChromeOutlined } from "@ant-design/icons";
 
 const columns = [
@@ -93,6 +93,9 @@ const data = [
     register_holiday: "10/10/2024 - 12/10/2024",
   },
 ];
+const handleChange = (value) => {
+  console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
+};
 
 const Dayoff = () => {
   return (
@@ -106,8 +109,44 @@ const Dayoff = () => {
           </div>
           <div className="g_status">
             <label className="l_status">Status</label>
-            <input type="text" className="i_status" />
+            {/* <input type="text" className="i_status" /> */}
+            <Select
+              className="s_drop"
+              labelInValue
+              defaultValue={{
+                value: "All",
+                label: "All",
+              }}
+              style={{
+                width: 120,
+              }}
+              dropdownStyle={{ border: "none" }}
+              onChange={handleChange}
+              options={[
+                {
+                  value: "how",
+                  label: "how",
+                },
+                {
+                  value: "about",
+                  label: "about",
+                },
+                {
+                  value: "me",
+                  label: "me",
+                },
+              ]}
+            />
           </div>
+        </div>
+        <div className="employee-search">
+          <input
+            // value={searchValue}
+            // onChange={(e) => setSearchValue(e.target.value)}
+            className="employee-search__input"
+            type="text"
+            placeholder="Enter keywords"
+          />
         </div>
         <div>
           <Table columns={columns} dataSource={data} />

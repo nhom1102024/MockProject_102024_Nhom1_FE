@@ -16,6 +16,12 @@ function SideBarAdmin() {
       case "humanrsc":
         navigate("/employee");
         break;
+      case "dayoff":
+        navigate("/dayoff");
+        break;
+      case "candidates":
+        navigate("/candidates");
+        break;
       default:
         break;
     }
@@ -33,6 +39,14 @@ function SideBarAdmin() {
     {
       key: "humanrsc",
       label: "Human Resources Management",
+    },
+    {
+      key: "dayoff",
+      label: "Manage Dayoff",
+    },
+    {
+      key: "candidates",
+      label: "Manage Candidates",
     },
     {
       key: "asset",

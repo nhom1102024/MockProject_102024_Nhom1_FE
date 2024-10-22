@@ -15,6 +15,9 @@ function SideBarCustomer() {
       case "contract":
         navigate("/contract");
         break;
+      case "holiday":
+        navigate("/holiday");
+        break;
       default:
         break;
     }
@@ -48,6 +51,10 @@ function SideBarCustomer() {
     {
       key: "notify",
       label: "Notification",
+    },
+    {
+      key: "holiday",
+      label: "Holiday",
     },
     {
       key: "logout",
