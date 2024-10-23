@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../../assets/css/Dayoff.css";
-import { Select, Space, Table } from "antd";
-import { AndroidOutlined, ChromeOutlined } from "@ant-design/icons";
+import { message, Select, Space, Table } from "antd";
+// import { AndroidOutlined, ChromeOutlined } from "@ant-design/icons";
+import axios from "axios";
 
 const columns = [
   {
@@ -46,58 +47,38 @@ const columns = [
     ),
   },
 ];
-const data = [
-  {
-    key: 1,
-    id: "1",
-    image: <AndroidOutlined />,
-    staff: "Le Van A",
-    departments: "Housekepping",
-    jobs_shift: "Morning",
-    register_holiday: "10/10/2024 - 12/10/2024",
-  },
-  {
-    key: 2,
-    id: "2",
-    image: <AndroidOutlined />,
-    staff: "Le Van A",
-    departments: "Housekepping",
-    jobs_shift: "Morning",
-    register_holiday: "10/10/2024 - 12/10/2024",
-  },
-  {
-    key: 3,
-    id: "3",
-    image: <AndroidOutlined />,
-    staff: "Le Van A",
-    departments: "Housekepping",
-    jobs_shift: "Morning",
-    register_holiday: "10/10/2024 - 12/10/2024",
-  },
-  {
-    key: 4,
-    id: "4",
-    image: <AndroidOutlined />,
-    staff: "Le Van A",
-    departments: "Housekepping",
-    jobs_shift: "Morning",
-    register_holiday: "10/10/2024 - 12/10/2024",
-  },
-  {
-    key: 5,
-    id: "5",
-    image: <AndroidOutlined />,
-    staff: "Le Van A",
-    departments: "Housekepping",
-    jobs_shift: "Morning",
-    register_holiday: "10/10/2024 - 12/10/2024",
-  },
-];
+
 const handleChange = (value) => {
   console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
 };
 
 const Dayoff = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const res = await axios.get(
+        `https://6717a6b8b910c6a6e0294a3e.mockapi.io/candidates`
+      );
+      if (res) {
+        setData(res.data);
+      } else {
+        console.log("error");
+      }
+    } catch (error) {
+      console.log(error);
+      message.error("Failed to load Holiday");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div>
       <h1 className="title">Manage Dayoff</h1>
@@ -149,7 +130,12 @@ const Dayoff = () => {
           />
         </div>
         <div>
-          <Table columns={columns} dataSource={data} />
+          <Table
+            rowKey="dayoff_id"
+            loading={loading}
+            columns={columns}
+            dataSource={data}
+          />
         </div>
       </div>
     </div>

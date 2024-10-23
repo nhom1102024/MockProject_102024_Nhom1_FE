@@ -32,6 +32,7 @@
 .i_date{
     width: 57%;
     padding: 10px;
+    cursor: pointer;
 }
 .g_status{
     height: 40px;
