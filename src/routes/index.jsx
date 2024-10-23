@@ -4,7 +4,9 @@ import EditEquipment from "../pages/staff/equipment/EditEquipment";
 import ListApartment from "../pages/staff/apartment/ListApartment";
 import AddMaintenanceRoom from "../pages/staff/apartment/AddMaintenanceRoom";
 import EditMaintenanceRoom from "../pages/staff/apartment/EditMaintenanceRoom";
-import ListBuilding from "../pages/staff/building/ListBuilding";
+import ListService from "../pages/staff/services/ListService";
+import AddService from "../pages/staff/services/AddService";
+import EditService from "../pages/staff/services/EditService";
 import Home from "../pages/home/Home";
 
 export const adminRoutes = [
@@ -15,5 +17,7 @@ export const adminRoutes = [
   { path: "/staff/apartment", component: ListApartment },
   { path: "/staff/apartment/add", component: AddMaintenanceRoom },
   { path: "/staff/apartment/edit/:id", component: EditMaintenanceRoom },
-  { path: "/staff/building", component: ListBuilding },
+  { path: "/staff/services", component: ListService },
+  { path: "/staff/services/add", component: AddService },
+  { path: "/staff/services/edit/:id", component: EditService },
 ];

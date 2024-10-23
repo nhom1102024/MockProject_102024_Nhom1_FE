@@ -15,16 +15,16 @@ function SideBarAdmin() {
         // navigate('/')
         break;
       }
-      case "technical": {
+      case "equipment": {
         navigate("/staff/equipment");
         break;
       }
-      case "apartment": {
+      case "building": {
         navigate("/staff/apartment");
         break;
       }
-      case "buildinfor": {
-        navigate("/staff/building");
+      case "service": {
+        navigate("/staff/services");
         break;
       }
     }
@@ -50,23 +50,23 @@ function SideBarAdmin() {
           key: "building",
           icon: <RightOutlined />,
           label: "Building Management",
-          children: [
-            {
-              key: "apartment",
-              icon: <RightOutlined />,
-              label: "Apartment Information",
-            },
-            {
-              key: "buildinfor",
-              icon: <RightOutlined />,
-              label: "Building Information",
-            },
-          ],
         },
         {
           key: "technical",
           icon: <RightOutlined />,
           label: "Technical Systems",
+          children: [
+            {
+              key: "equipment",
+              icon: <RightOutlined />,
+              label: "System List",
+            },
+            {
+              key: "service",
+              icon: <RightOutlined />,
+              label: "Service Systems",
+            },
+          ],
         },
         {
           key: "g3",
