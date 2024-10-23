@@ -45,6 +45,12 @@ function SideBarAdmin() {
           key: "service-contracts",
           icon: <RightOutlined />,
           label: "Service Contracts",
+          children: [
+            {
+              key: "view-fines-list",
+              label: "View Fines List",
+            },
+          ],
         },
         {
           key: "g4",
@@ -70,6 +76,8 @@ function SideBarAdmin() {
       navigate("/add-contract");
     } else if (e.key === "list-employee-contract") {
       navigate("/list-employee-contract");
+    } else if (e.key === "view-fines-list") {
+      navigate("/view-fines-list"); // Điều hướng đến trang View Fines List
     }
     // Bạn có thể thêm nhiều điều hướng cho các mục khác nếu cần
   };

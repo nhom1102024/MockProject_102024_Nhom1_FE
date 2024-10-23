@@ -4,6 +4,8 @@ import EditContract from "../pages/Contract/EditContract";
 import AddContract from "../pages/Contract/AddContract";
 import RentAnApartment from "../pages/rentanapartment/RentAnApartment";
 import CustomerHome from "../pages/customerhome/CustomerHome";
+import ViewFinesList from "../pages/fines/ViewFinesList";
+import FineDetail from "../pages/fines/FineDetail";
 
 export const adminRoutes = [
   { path: "/admin-home", element: <Home /> },
@@ -19,4 +21,6 @@ export const customerRoutes = [
     role: "customer",
   },
   { path: "/rent-anapartment", element: <RentAnApartment />, role: "customer" },
+  { path: "/view-fines-list", element: <ViewFinesList />, role: "customer" },
+  { path: "/fine-detail/:id", element: <FineDetail />, role: "customer" },
 ];
