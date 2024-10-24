@@ -1,6 +1,7 @@
 import { Menu } from "antd";
 import { useNavigate } from "react-router-dom";
 import "../../assets/css/SideBar.css";
+import { RightOutlined } from "@ant-design/icons";
 
 function SideBarCustomer() {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ function SideBarCustomer() {
         break;
       case "holiday":
         navigate("/holiday");
+        break;
+      case "view-fines-list":
+        navigate("/view-fines-list");
         break;
       default:
         break;
@@ -47,6 +51,20 @@ function SideBarCustomer() {
     {
       key: "pay",
       label: "Pay",
+      children: [
+        {
+          key: "g1",
+          // icon: <RightOutlined />,
+          label: "Service Contact",
+          children: [
+            {
+              key: "view-fines-list",
+              // icon: <RightOutlined />,
+              label: "View Fines List",
+            },
+          ],
+        },
+      ],
     },
     {
       key: "notify",
