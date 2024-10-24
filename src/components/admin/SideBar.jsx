@@ -22,6 +22,9 @@ function SideBarAdmin() {
       case "candidates":
         navigate("/candidates");
         break;
+      case "list-employee-contract":
+        navigate("/list-employee-contract");
+        break;
       default:
         break;
     }
@@ -64,8 +67,14 @@ function SideBarAdmin() {
         },
         {
           key: "g3",
-          icon: <RightOutlined />,
+          // icon: <RightOutlined />,
           label: "Service Contracts",
+          children: [
+            {
+              key: "list-employee-contract",
+              label: "List employee-contact",
+            },
+          ],
         },
         {
           key: "g4",
