@@ -1,10 +1,16 @@
 import { Layout } from "antd";
 import { Icon } from "@iconify/react";
+import { useNavigate } from "react-router-dom";
 import "../../assets/css/Header.css";
 
 const { Header } = Layout;
 
 function HeaderAdmin() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("role");
+    navigate(0);
+  };
   return (
     <Header className="header">
       <div className="header-logo">
@@ -38,10 +44,18 @@ function HeaderAdmin() {
           <div className="header-actions">
             <Icon className="header-actions_icon" icon="mdi-light:bell" />
             <Icon className="header-actions_icon" icon="uiw:mail-o" />
-            <Icon
-              className="header-actions_icon"
-              icon="gridicons:user-circle"
-            />
+            <div className="header-icon-user">
+              <Icon
+                className="header-actions_icon "
+                icon="gridicons:user-circle"
+              />
+              <div className="header-sub-actions">
+                <ul>
+                  <li>Xem hồ sơ</li>
+                  <li onClick={handleLogout}>Đăng xuất</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

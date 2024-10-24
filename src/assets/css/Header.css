@@ -107,3 +107,45 @@
   height: 28px;
   color: #7c7c7c;
 }
+
+.header-icon-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-icon-user:hover .header-sub-actions {
+  display: block;
+}
+
+.header-sub-actions::before {
+  position: absolute;
+  content: "";
+  width: 250px;
+  height: 15px;
+  top: -10px;
+  left: 0;
+  background-color: transparent;
+}
+
+.header-sub-actions {
+  position: absolute;
+  background-color: #ffffff;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 250px;
+  display: none;
+}
+
+.header-sub-actions ul {
+  list-style-type: none;
+}
+
+.header-sub-actions ul li {
+  text-align: center;
+}
+
+.header-sub-actions ul li:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
