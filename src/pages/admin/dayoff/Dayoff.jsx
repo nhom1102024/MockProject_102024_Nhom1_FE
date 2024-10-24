@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../../../assets/css/Dayoff.css";
-import { message, Select, Space, Table } from "antd";
+import { Button, message, Select, Space, Table } from "antd";
 // import { AndroidOutlined, ChromeOutlined } from "@ant-design/icons";
 import axios from "axios";
+import {
+  AndroidOutlined,
+  CheckOutlined,
+  CloseOutlined,
+} from "@ant-design/icons";
 
 const columns = [
   {
@@ -41,10 +46,43 @@ const columns = [
     key: "x",
     render: (_, record) => (
       <Space size="middle">
-        <a>Invite {record.name}</a>
-        <a>Delete</a>
+        <a>
+          <CheckOutlined />
+        </a>
+        <a>
+          <CloseOutlined />
+        </a>
       </Space>
     ),
+  },
+];
+const data = [
+  {
+    key: 1,
+    id: "1",
+    image: <AndroidOutlined />,
+    staff: "Le Van A",
+    departments: "House Kepping",
+    jobs_shift: "Morning",
+    register_holiday: "10/10/2024 - 12/10/2024",
+  },
+  {
+    key: 2,
+    id: "2",
+    image: <AndroidOutlined />,
+    staff: "Le Van A",
+    departments: "House Kepping",
+    jobs_shift: "Morning",
+    register_holiday: "10/10/2024 - 12/10/2024",
+  },
+  {
+    key: 3,
+    id: "3",
+    image: <AndroidOutlined />,
+    staff: "Le Van A",
+    departments: "House Kepping",
+    jobs_shift: "Morning",
+    register_holiday: "10/10/2024 - 12/10/2024",
   },
 ];
 
@@ -53,31 +91,27 @@ const handleChange = (value) => {
 };
 
 const Dayoff = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  //   const [data, setData] = useState([]);
+  //   const [loading, setLoading] = useState(false);
 
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      const res = await axios.get(
-        `https://6717a6b8b910c6a6e0294a3e.mockapi.io/candidates`
-      );
-      if (res) {
-        setData(res.data);
-      } else {
-        console.log("error");
-      }
-    } catch (error) {
-      console.log(error);
-      message.error("Failed to load Holiday");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  //   const fetchData = async () => {
+  //     setLoading(true);
+  //     try {
+  //       const res = await axios.get(
+  //         `https://6717a6b8b910c6a6e0294a3e.mockapi.io/candidates`
+  //       );
+  //       if (res) {
+  //         setData(res.data);
+  //       } else {
+  //         console.log("error");
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //       message.error("Failed to load Holiday");
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
   return (
     <div>
@@ -132,7 +166,7 @@ const Dayoff = () => {
         <div>
           <Table
             rowKey="dayoff_id"
-            loading={loading}
+            // loading={loading}
             columns={columns}
             dataSource={data}
           />
