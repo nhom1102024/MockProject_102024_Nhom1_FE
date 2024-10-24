@@ -77,19 +77,25 @@
 .employee-search__input::placeholder {
     color: #a77d7d;
 }
-.ant-select-selector {
-    border: none !important; 
-    box-shadow: none !important; 
-    background: rgb(1, 144, 1) !important;
-    align-items: center !important;
-    text-align: center !important;
-    font-size: 18px !important;
-    color: white !important;
-    padding: 5px 10px !important;
-    margin-left: 5px !important;
+
+.s_drop{
+    .ant-select-selector {
+        border: none !important; 
+        box-shadow: none !important; 
+        background: rgb(1, 144, 1) !important;
+        align-items: center !important;
+        text-align: center !important;
+        font-size: 18px !important;
+        color: white !important;
+        padding: 5px 10px !important;
+        margin-left: 5px !important;
+    }
 }
-.ant-select-selector:hover {
-    font-size: 18px !important;
-    padding: 5px 10px !important;
-    background: rgb(70, 140, 70) !important;
+
+.s_drop {
+    .ant-select-selector:hover {
+        font-size: 18px !important;
+        padding: 5px 10px !important;
+        background: rgb(70, 140, 70) !important;
+    }
 }
