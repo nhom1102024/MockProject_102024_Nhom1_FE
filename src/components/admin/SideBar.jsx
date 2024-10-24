@@ -1,34 +1,35 @@
 import { Menu } from "antd";
-import { RightOutlined } from "@ant-design/icons";
-import "./SideBar.css";
 import { useNavigate } from "react-router-dom";
+import { RightOutlined } from "@ant-design/icons";
+import "../../assets/css/SideBar.css";
+
 function SideBarAdmin() {
   const navigate = useNavigate();
   const handleClick = (e) => {
-    console.log(e.key);
     switch (e.key) {
-      case "home": {
+      case "home":
         navigate("/");
         break;
-      }
-      case "financial": {
-        // navigate('/')
+      case "financial":
+        // navigate("/page2");
         break;
-      }
-      case "equipment": {
-        navigate("/staff/equipment");
+      case "humanrsc":
+        navigate("/employee");
         break;
-      }
-      case "building": {
-        navigate("/staff/apartment");
+      case "dayoff":
+        navigate("/dayoff");
         break;
-      }
-      case "service": {
-        navigate("/staff/services");
+      case "candidates":
+        navigate("/candidates");
         break;
-      }
+      case "list-employee-contract":
+        navigate("/list-employee-contract");
+        break;
+      default:
+        break;
     }
   };
+
   const items = [
     {
       key: "home",
@@ -43,35 +44,37 @@ function SideBarAdmin() {
       label: "Human Resources Management",
     },
     {
+      key: "dayoff",
+      label: "Manage Dayoff",
+    },
+    {
+      key: "candidates",
+      label: "Manage Candidates",
+    },
+    {
       key: "asset",
       label: "Asset Management",
       children: [
         {
-          key: "building",
+          key: "g1",
           icon: <RightOutlined />,
-          label: "Building Management",
+          label: "Building Information",
         },
         {
-          key: "technical",
+          key: "g2",
           icon: <RightOutlined />,
           label: "Technical Systems",
-          children: [
-            {
-              key: "equipment",
-              icon: <RightOutlined />,
-              label: "System List",
-            },
-            {
-              key: "service",
-              icon: <RightOutlined />,
-              label: "Service Systems",
-            },
-          ],
         },
         {
           key: "g3",
-          icon: <RightOutlined />,
+          // icon: <RightOutlined />,
           label: "Service Contracts",
+          children: [
+            {
+              key: "list-employee-contract",
+              label: "List employee-contact",
+            },
+          ],
         },
         {
           key: "g4",
@@ -81,10 +84,11 @@ function SideBarAdmin() {
       ],
     },
   ];
+
   return (
     <div className="sidebar">
       <Menu
-        onClick={(e) => handleClick(e)}
+        onClick={handleClick}
         className="sidebar-menu"
         defaultSelectedKeys={["1"]}
         defaultOpenKeys={["sub1"]}

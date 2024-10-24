@@ -1,0 +1,62 @@
+.title{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.holiday{
+    padding: 25px;
+    background-color: #fff;
+    /* margin: 35px 50px 0px; */
+    margin-left: 35px;
+    height: 558px;
+    width: 95%;
+    border-radius: 25px 0 0;
+    box-shadow: black 5px;
+}
+.header_i{
+    display: flex;
+    padding: 40px;
+}
+.s_date{
+    display: block;
+    float: left;
+    width: 47.5%;
+}
+.l_date{
+    font-size: 25px;
+    font-weight: 500;
+}
+.i_date{
+    width: 57%;
+    padding: 10px;
+}
+
+.des{
+    float: right;
+    width: 47.5%;
+}
+.l_des{
+    font-size: 25px;
+    font-weight: 500;
+}
+.i_des{
+    width: 70%;
+    padding: 0px 0px 95px;
+}
+.b_holiday{
+    margin-right: 350px;
+    padding: 13px 45px;
+    background: #058e09;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    /* margin-bottom: 10px; */
+}
+
+.b_holiday:hover{
+    background-color: rgb(2, 65, 2);
+}

@@ -1,0 +1,195 @@
+/* Tiêu đề của phần thuê căn hộ */
+.apartment-rent-header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+/* Nội dung của phần thuê căn hộ */
+.apartment-rent-content {
+  display: flex;
+  flex-direction: column; /* Đặt nội dung theo cột */
+  background-color: #fff;
+}
+
+/* Thẻ card cho từng căn hộ */
+.apartment-rent-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 2px 0;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Hình ảnh căn hộ */
+.apartment-rent-image {
+  width: 200px; /* Chiều rộng hình ảnh */
+  height: 150px; /* Chiều cao hình ảnh */
+  object-fit: cover; /* Cắt hình ảnh cho vừa khung */
+  border-radius: 8px; /* Bo góc cho hình ảnh */
+}
+
+/* Thông tin căn hộ */
+.apartment-rent-details {
+  display: flex; /* Sắp xếp theo hàng */
+  justify-content: space-between; /* Đặt khoảng cách giữa các nhóm */
+  margin-top: 10px; /* Khoảng cách giữa thông tin căn hộ và chính sách thú cưng */
+}
+
+/* Thông tin căn hộ */
+.apartment-rent-info {
+  flex: 1; /* Căn chỉnh chiều rộng cho thông tin căn hộ */
+  padding-left: 20px; /* Thêm padding bên trái */
+}
+
+/* Tiêu đề thông tin căn hộ */
+.apartment-rent-info h2 {
+  margin: 0;
+  font-size: 20px; /* Kích thước chữ */
+  font-weight: bold; /* Độ đậm chữ */
+  padding-bottom: 5px;
+}
+
+/* Định dạng cho các đoạn văn bản trong thông tin căn hộ */
+.apartment-rent-info p {
+  margin: 5px 0; /* Khoảng cách giữa các đoạn */
+}
+
+/* Chính sách thú cưng */
+.apartment-rent-pet-policy {
+  margin-top: 0; /* Không có khoảng cách trên */
+  padding-left: 20px; /* Thêm padding bên trái cho sự đồng nhất */
+  flex: 1; /* Căn chỉnh chiều rộng cho chính sách thú cưng */
+}
+
+/* Định dạng cho các mục chính sách thú cưng */
+.apartment-rent-pet-policy h3 {
+  margin-bottom: 5px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Form đặt lịch */
+.apartment-rent-form {
+  margin-top: 10px; /* Khoảng cách trên */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Màu nền cho form */
+}
+
+/* Định dạng cho các nhóm form */
+.apartment-rent-form-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px; /* Khoảng cách giữa các nhóm */
+}
+
+/* Định dạng cho label */
+.apartment-rent-form-group label {
+  width: 150px; /* Chiều rộng label */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Định dạng cho input */
+.apartment-rent-form-group input {
+  width: calc(70% - 160px); /* Chiều rộng trừ khoảng cách label */
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Định dạng cho span (hiển thị thông tin căn hộ) */
+.apartment-rent-form-group span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* Nút gửi */
+.apartment-rent-btn-submit {
+  padding: 10px 50px; /* Padding cho nút */
+  background-color: #28a745; /* Màu nền cho nút */
+  color: white; /* Màu chữ cho nút */
+  border: none; /* Không có đường viền */
+  border-radius: 20px; /* Bo góc cho nút */
+  cursor: pointer; /* Hiệu ứng con trỏ khi hover */
+  font-size: 16px; /* Kích thước chữ cho nút */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+  display: block; /* Để có thể căn giữa */
+  margin: 20px auto 0; /* Tự động căn giữa và tạo khoảng cách phía trên */
+}
+
+/* Hiệu ứng hover cho nút */
+.apartment-rent-btn-submit:hover {
+  background-color: #218838; /* Màu nền khi hover */
+}
+
+/* Phần Introduction */
+.apartment-introduction {
+  background-color: #fff; /* Màu nền trắng */
+  padding: 15px 20px; /* Padding xung quanh phần nội dung */
+  border-radius: 8px; /* Bo tròn các góc */
+  margin-top: 20px; /* Khoảng cách phía trên */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Tiêu đề Introduction */
+.apartment-introduction h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  color: #333; /* Màu chữ tối */
+}
+
+/* Nội dung của Introduction */
+.apartment-introduction p {
+  font-size: 16px; /* Kích thước chữ */
+  color: #555; /* Màu chữ xám */
+  margin-bottom: 10px; /* Khoảng cách giữa các đoạn */
+  line-height: 1.5; /* Chiều cao dòng */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .apartment-rent-card {
+    flex-direction: column; /* Đặt các phần tử theo cột trên màn hình nhỏ */
+    align-items: flex-start; /* Căn chỉnh các phần tử bên trái */
+  }
+
+  .apartment-rent-image {
+    width: 100%; /* Đặt chiều rộng hình ảnh 100% cho màn hình nhỏ */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    margin-bottom: 10px; /* Khoảng cách dưới hình ảnh */
+  }
+
+  .apartment-rent-details {
+    flex-direction: column; /* Đặt các phần tử theo cột trên màn hình nhỏ */
+  }
+
+  .apartment-rent-info,
+  .apartment-rent-pet-policy {
+    margin-right: 0; /* Không có khoảng cách bên phải trên màn hình nhỏ */
+    margin-bottom: 10px; /* Khoảng cách giữa các nhóm */
+  }
+
+  .apartment-rent-form-group label {
+    width: auto; /* Cho phép label linh động hơn trên màn hình nhỏ */
+  }
+
+  .apartment-rent-form-group input {
+    width: 100%; /* Input chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+  }
+}
+
+.apartment-rent-form h2 {
+  padding-bottom: 20px;
+}
+.apartment-rent-form p {
+  padding-bottom: 10px;
+}
