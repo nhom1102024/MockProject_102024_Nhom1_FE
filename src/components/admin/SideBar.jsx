@@ -22,6 +22,10 @@ function SideBarAdmin() {
       case "candidates":
         navigate("/candidates");
         break;
+      case "list-employee-contract":
+        navigate("/list-employee-contract");
+        break;
+
       default:
         break;
     }
@@ -53,19 +57,22 @@ function SideBarAdmin() {
       label: "Asset Management",
       children: [
         {
-          key: "g1",
+          key: "building",
           icon: <RightOutlined />,
-          label: "Building Information",
+          label: "Building Management",
         },
-        {
-          key: "g2",
-          icon: <RightOutlined />,
-          label: "Technical Systems",
-        },
+
         {
           key: "g3",
-          icon: <RightOutlined />,
+          // icon: <RightOutlined />,
           label: "Service Contracts",
+          children: [
+            {
+              key: "list-employee-contract",
+              icon: <RightOutlined />,
+              label: "List employee-contact",
+            },
+          ],
         },
         {
           key: "g4",
@@ -75,6 +82,7 @@ function SideBarAdmin() {
       ],
     },
   ];
+
   return (
     <div className="sidebar">
       <Menu
