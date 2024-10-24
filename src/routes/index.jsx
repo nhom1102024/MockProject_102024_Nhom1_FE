@@ -30,7 +30,7 @@ export const adminRoutes = [
 ];
 
 export const publicRoutes = [
-  { path: "/", component: Home },
+  { path: "/", component: CustomerHome },
   { path: "/contract", component: ViewContracts },
   { path: "/contract/detail/:id", component: ContractDetail },
   { path: "/contract/add", component: Addcontract },
