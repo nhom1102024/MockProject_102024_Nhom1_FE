@@ -26,7 +26,7 @@ const ViewHolidays = () => {
       dataIndex: "",
       key: "x",
       render: (text, record) => (
-        <a onClick={() => handleDelete(record.id)}>Delete</a> // Gọi hàm delete
+        <a onClick={() => handleDelete(record.holiday_id)}>Delete</a> // Gọi hàm delete
       ),
     },
   ];
@@ -34,13 +34,10 @@ const ViewHolidays = () => {
   //create
   const postData = async () => {
     try {
-      const res = await axios.post(
-        `https://6717a6b8b910c6a6e0294a3e.mockapi.io/holiday`,
-        {
-          date,
-          description,
-        }
-      );
+      await axios.post(`https://6717a6b8b910c6a6e0294a3e.mockapi.io/holiday`, {
+        date,
+        description,
+      });
       message.success("Holiday added successfully");
       setDate("");
       setDescription("");

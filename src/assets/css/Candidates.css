@@ -22,7 +22,7 @@ h3{
     display: flex;
 }
 
-.box{
+.boxx{
     height: 40px;
     display: flex;
     cursor: pointer;
@@ -33,10 +33,10 @@ h3{
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     margin-right: 10px;
 }
-.box:hover input{
+.boxx:hover input{
     width: 400px;
 }
-.box input{
+.boxx input{
     width: 0;
     outline: none;
     border: none;
@@ -45,7 +45,7 @@ h3{
     background: transparent;
 }
 
-.box a .fas{
+.boxx a .fas{
     color: #1daf;
     font-size: 20px;
 }

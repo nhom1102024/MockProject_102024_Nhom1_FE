@@ -1,33 +1,63 @@
 import React, { useEffect, useState } from "react";
-import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import "./Candidates.css";
+import { Icon } from "@iconify/react";
+import "../../../assets/css/Candidates.css";
 import {
   AndroidOutlined,
   PlusOutlined,
   SearchOutlined,
 } from "@ant-design/icons";
-import { Button, Form, Modal, Space, Table, Input } from "antd";
+import { message, Space, Table } from "antd";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Candidates = () => {
-  const [form] = Form.useForm();
-  const [clientReady, setClientReady] = useState(false);
-  // To disable submit button at the beginning.
+  const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  // const handleDetail = (record) => {
+  //   navigate("/details-candidates/${record.candidates_id}");
+  // };
+
+  //create
+  const handleAddCandidates = () => {
+    navigate("/add-candidates");
+  };
+
+  //delete
+  const handleDeleteCandidates = async (candidates_id) => {
+    try {
+      await axios.delete(
+        `https://6717a6b8b910c6a6e0294a3e.mockapi.io/candidate/${candidates_id}`
+      );
+      message.success("Candidates deleted successfully");
+      fetchData();
+    } catch (error) {
+      console.log(error);
+      message.error("Failed to delete holiday");
+    }
+  };
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const res = await axios.get(
+        `https://6717a6b8b910c6a6e0294a3e.mockapi.io/candidate`
+      );
+      if (res) {
+        setData(data);
+      } else {
+        console.log("Error");
+      }
+    } catch (error) {
+      console.log(error);
+      message.error("Failed loading data");
+    } finally {
+      setLoading(false);
+    }
+  };
   useEffect(() => {
-    setClientReady(true);
+    fetchData();
   }, []);
-  const onFinish = (values) => {
-    console.log("Finish:", values);
-  };
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
 
   const columns = [
     {
@@ -71,68 +101,80 @@ const Candidates = () => {
       key: "x",
       render: (_, record) => (
         <Space size="small">
-          <Button onClick={showModal} color="primary" variant="outlined">
-            Edit
-          </Button>
-          <Button color="danger" variant="outlined">
-            Delete
-          </Button>
+          <div style={{ display: "flex", gap: "8px" }}>
+            <Icon
+              className="employee__icon"
+              icon="iconamoon:eye-thin"
+              // onClick={handleDetail(record)}
+            />
+            <Icon
+              className="employee__icon"
+              // onClick={() => handleEdit(record)}
+              icon="mage:edit"
+            />
+            <Icon
+              className="employee__icon"
+              onClick={() => handleDeleteCandidates(record.candidates_id)}
+              icon="iconoir:xmark"
+            />
+          </div>
         </Space>
       ),
     },
   ];
-  const data = [
-    {
-      key: 1,
-      id: "1",
-      image: <AndroidOutlined />,
-      name: "Le Van A",
-      gmail: "levana@gmail.com",
-      phone: "0123456789",
-      candidates_position: "Head of the partment",
-      status: "Processing",
-    },
-    {
-      key: 2,
-      id: "2",
-      image: <AndroidOutlined />,
-      name: "Le Van A",
-      gmail: "levana@gmail.com",
-      phone: "0123456789",
-      candidates_position: "Head of the partment",
-      status: "Processing",
-    },
-    {
-      key: 3,
-      id: "3",
-      image: <AndroidOutlined />,
-      name: "Le Van A",
-      gmail: "levana@gmail.com",
-      phone: "0123456789",
-      candidates_position: "Head of the partment",
-      status: "Processing",
-    },
-    {
-      key: 4,
-      id: "4",
-      image: <AndroidOutlined />,
-      name: "Le Van A",
-      gmail: "levana@gmail.com",
-      phone: "0123456789",
-      candidates_position: "Head of the partment",
-      status: "Processing",
-    },
-    {
-      key: 5,
-      id: "5",
-      image: <AndroidOutlined />,
-      name: "Le Van A",
-      gmail: "levana@gmail.com",
-      phone: "0123456789",
-      candidates_position: "Head of the partment",
-      status: "Processing",
-    },
-  ];
+
+  // const data = [
+  //   {
+  //     key: 1,
+  //     id: "1",
+  //     image: <AndroidOutlined />,
+  //     name: "Le Van A",
+  //     gmail: "levana@gmail.com",
+  //     phone: "0123456789",
+  //     candidates_position: "Head of the partment",
+  //     status: "Processing",
+  //   },
+  //   {
+  //     key: 2,
+  //     id: "2",
+  //     image: <AndroidOutlined />,
+  //     name: "Le Van A",
+  //     gmail: "levana@gmail.com",
+  //     phone: "0123456789",
+  //     candidates_position: "Head of the partment",
+  //     status: "Processing",
+  //   },
+  //   {
+  //     key: 3,
+  //     id: "3",
+  //     image: <AndroidOutlined />,
+  //     name: "Le Van A",
+  //     gmail: "levana@gmail.com",
+  //     phone: "0123456789",
+  //     candidates_position: "Head of the partment",
+  //     status: "Processing",
+  //   },
+  //   {
+  //     key: 4,
+  //     id: "4",
+  //     image: <AndroidOutlined />,
+  //     name: "Le Van A",
+  //     gmail: "levana@gmail.com",
+  //     phone: "0123456789",
+  //     candidates_position: "Head of the partment",
+  //     status: "Processing",
+  //   },
+  //   {
+  //     key: 5,
+  //     id: "5",
+  //     image: <AndroidOutlined />,
+  //     name: "Le Van A",
+  //     gmail: "levana@gmail.com",
+  //     phone: "0123456789",
+  //     candidates_position: "Head of the partment",
+  //     status: "Processing",
+  //   },
+  // ];
 
   return (
     <div>
@@ -140,11 +182,11 @@ const Candidates = () => {
       <div className="candidate">
         <h3>List of Candidates</h3>
         <div className="search-box">
-          <div className="box">
+          <div className="boxx">
             <input type="text" placeholder="Enter keywords..." />
             <SearchOutlined />
           </div>
-          <button>
+          <button onClick={handleAddCandidates}>
             <p className="icon">
               <PlusOutlined />
             </p>
@@ -154,65 +196,6 @@ const Candidates = () => {
         <div className="table">
           <Table columns={columns} dataSource={data} />
         </div>
-      </div>
-      <div>
-        <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <div>
-            <h2>Detail Information</h2>
-            <div>
-              <Form
-                form={form}
-                name="horizontal_login"
-                layout="inline"
-                onFinish={onFinish}
-              >
-                <Form.Item
-                  name="username"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your username!",
-                    },
-                  ]}
-                >
-                  <Input prefix={<UserOutlined />} placeholder="Username" />
-                </Form.Item>
-                <Form.Item
-                  name="password"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your password!",
-                    },
-                  ]}
-                >
-                  <Input
-                    prefix={<LockOutlined />}
-                    type="password"
-                    placeholder="Password"
-                  />
-                </Form.Item>
-                <Form.Item shouldUpdate>
-                  {() => (
-                    <Button
-                      type="primary"
-                      htmlType="submit"
-                      disabled={
-                        !clientReady ||
-                        !form.isFieldsTouched(true) ||
-                        !!form
-                          .getFieldsError()
-                          .filter(({ errors }) => errors.length).length
-                      }
-                    >
-                      Log in
-                    </Button>
-                  )}
-                </Form.Item>
-              </Form>
-            </div>
-          </div>
-        </Modal>
       </div>
     </div>
   );

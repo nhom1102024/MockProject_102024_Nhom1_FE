@@ -1,0 +1,39 @@
+.title-add{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.candidate-add{
+    padding: 25px;
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    margin-left: 35px;
+    height: 558px;
+    width: 95%;
+    border-radius: 25px 0 0;
+    box-shadow: black 5px;    
+}
+
+h3{
+    font-weight: bold;
+}
+.image-input {
+    display: flex;
+    float: left;
+    width: 20%; /* Điều chỉnh chiều rộng theo nhu cầu */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    box-sizing: 30px;
+}
+.button-can{
+   float: right;
+
+}
+
+
+
+
+
