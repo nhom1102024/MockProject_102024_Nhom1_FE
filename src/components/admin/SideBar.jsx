@@ -25,6 +25,19 @@ function SideBarAdmin() {
       case "list-employee-contract":
         navigate("/list-employee-contract");
         break;
+      case "equipment": {
+        navigate("/staff/equipment");
+        break;
+      }
+      case "building": {
+        navigate("/staff/apartment");
+        break;
+      }
+      case "service": {
+        navigate("/staff/services");
+        break;
+      }
+
       default:
         break;
     }
@@ -56,14 +69,26 @@ function SideBarAdmin() {
       label: "Asset Management",
       children: [
         {
-          key: "g1",
+          key: "building",
           icon: <RightOutlined />,
-          label: "Building Information",
+          label: "Building Management",
         },
         {
-          key: "g2",
-          icon: <RightOutlined />,
+          key: "technical",
+          // icon: <RightOutlined />,
           label: "Technical Systems",
+          children: [
+            {
+              key: "equipment",
+              icon: <RightOutlined />,
+              label: "System List",
+            },
+            {
+              key: "service",
+              icon: <RightOutlined />,
+              label: "Service Systems",
+            },
+          ],
         },
         {
           key: "g3",
@@ -72,6 +97,7 @@ function SideBarAdmin() {
           children: [
             {
               key: "list-employee-contract",
+              icon: <RightOutlined />,
               label: "List employee-contact",
             },
           ],
