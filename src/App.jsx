@@ -1,40 +1,52 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { adminRoutes, customerRoutes } from "./routes";
+import { adminRoutes, publicRoutes } from "./routes";
 import AdminLayout from "./layouts/admin/AdminLayout";
+import "../src/assets/css/App.css";
+import { useState } from "react";
 import CustomerLayout from "./layouts/customer/CustomerLayout";
-import "./App.css";
 
 function App() {
+  const [role, setRole] = useState("admin");
   return (
-    <div className="App">
+    <>
       <Router>
-        <Routes>
-          {/* Routes dành cho admin */}
-          {adminRoutes.map((route, index) => {
-            const Layout = AdminLayout;
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                element={<Layout>{route.element}</Layout>}
-              />
-            );
-          })}
-
-          {/* Routes dành cho customer */}
-          {customerRoutes.map((route, index) => {
-            const Layout = CustomerLayout;
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                element={<Layout>{route.element}</Layout>}
-              />
-            );
-          })}
-        </Routes>
+        <div className="App">
+          <Routes>
+            {role === "admin"
+              ? adminRoutes.map((route, index) => {
+                  const Page = route.component;
+                  let Layout = AdminLayout;
+                  return (
+                    <Route
+                      key={index}
+                      path={route.path}
+                      element={
+                        <Layout>
+                          <Page />
+                        </Layout>
+                      }
+                    />
+                  );
+                })
+              : publicRoutes.map((route, index) => {
+                  const Page = route.component;
+                  let Layout = CustomerLayout;
+                  return (
+                    <Route
+                      key={index}
+                      path={route.path}
+                      element={
+                        <Layout>
+                          <Page />
+                        </Layout>
+                      }
+                    />
+                  );
+                })}
+          </Routes>
+        </div>
       </Router>
-    </div>
+    </>
   );
 }
 

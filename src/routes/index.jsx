@@ -1,26 +1,29 @@
+import AddEmployee from "../pages/admin/employee/AddEmployee";
+import EditEmployee from "../pages/admin/employee/EditEmployee";
+import ListEmployee from "../pages/admin/employee/ListEmployee";
+import Dayoff from "../pages/admin/dayoff/Dayoff";
+import Addcontract from "../pages/customer/contract/AddContract";
+import ContractDetail from "../pages/customer/contract/ContractDetail";
+import Editcontract from "../pages/customer/contract/EditContract";
+import ViewContracts from "../pages/customer/contract/ViewContracts";
+import ViewHolidays from "../pages/customer/holiday/ViewHolidays";
 import Home from "../pages/home/Home";
-import ListEmployeeContract from "../pages/Contract/ListEmployeeContract";
-import EditContract from "../pages/Contract/EditContract";
-import AddContract from "../pages/Contract/AddContract";
-import RentAnApartment from "../pages/rentanapartment/RentAnApartment";
-import CustomerHome from "../pages/customerhome/CustomerHome";
-import ViewFinesList from "../pages/fines/ViewFinesList";
-import FineDetail from "../pages/fines/FineDetail";
+import Candidates from "../pages/admin/candidates/Candidates";
 
 export const adminRoutes = [
-  { path: "/admin-home", element: <Home /> },
-  { path: "/list-employee-contract", element: <ListEmployeeContract /> },
-  { path: "/edit-contract/:id", element: <EditContract /> },
-  { path: "/add-contract", element: <AddContract /> },
+  { path: "/", component: Home },
+  { path: "/employee", component: ListEmployee },
+  { path: "/employee/add", component: AddEmployee },
+  { path: "/employee/edit/:id", component: EditEmployee },
+  { path: "/dayoff", component: Dayoff },
+  { path: "/candidates", component: Candidates },
 ];
 
-export const customerRoutes = [
-  {
-    path: "/home",
-    element: <CustomerHome />,
-    role: "customer",
-  },
-  { path: "/rent-anapartment", element: <RentAnApartment />, role: "customer" },
-  { path: "/view-fines-list", element: <ViewFinesList />, role: "customer" },
-  { path: "/fine-detail/:id", element: <FineDetail />, role: "customer" },
+export const publicRoutes = [
+  { path: "/", component: Home },
+  { path: "/contract", component: ViewContracts },
+  { path: "/contract/detail/:id", component: ContractDetail },
+  { path: "/contract/add", component: Addcontract },
+  { path: "/contract/edit/:id", component: Editcontract },
+  { path: "/holiday", component: ViewHolidays },
 ];

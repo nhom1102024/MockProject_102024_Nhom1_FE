@@ -1,10 +1,31 @@
 import { Menu } from "antd";
+import { useNavigate } from "react-router-dom";
 import { RightOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "./SideBar.css";
+import "../../assets/css/SideBar.css";
 
 function SideBarAdmin() {
-  const navigate = useNavigate(); // Khởi tạo navigate
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    switch (e.key) {
+      case "home":
+        navigate("/");
+        break;
+      case "financial":
+        // navigate("/page2");
+        break;
+      case "humanrsc":
+        navigate("/employee");
+        break;
+      case "dayoff":
+        navigate("/dayoff");
+        break;
+      case "candidates":
+        navigate("/candidates");
+        break;
+      default:
+        break;
+    }
+  };
 
   const items = [
     {
@@ -18,6 +39,14 @@ function SideBarAdmin() {
     {
       key: "humanrsc",
       label: "Human Resources Management",
+    },
+    {
+      key: "dayoff",
+      label: "Manage Dayoff",
+    },
+    {
+      key: "candidates",
+      label: "Manage Candidates",
     },
     {
       key: "asset",
@@ -34,19 +63,9 @@ function SideBarAdmin() {
           label: "Technical Systems",
         },
         {
-          key: "service-contracts",
+          key: "g3",
           icon: <RightOutlined />,
           label: "Service Contracts",
-          children: [
-            {
-              key: "list-employee-contract",
-              label: "List Employee Contracts",
-            },
-            {
-              key: "add-contract",
-              label: "Add Contract",
-            },
-          ],
         },
         {
           key: "g4",
@@ -56,22 +75,10 @@ function SideBarAdmin() {
       ],
     },
   ];
-
-  // Hàm xử lý sự kiện khi người dùng click vào các mục
-  const onClick = (e) => {
-    // Điều hướng đến các trang tương ứng dựa trên key
-    if (e.key === "add-contract") {
-      navigate("/add-contract");
-    } else if (e.key === "list-employee-contract") {
-      navigate("/list-employee-contract");
-    }
-    // Bạn có thể thêm nhiều điều hướng cho các mục khác nếu cần
-  };
-
   return (
     <div className="sidebar">
       <Menu
-        onClick={onClick} // Thêm hàm onClick vào Menu
+        onClick={handleClick}
         className="sidebar-menu"
         defaultSelectedKeys={["1"]}
         defaultOpenKeys={["sub1"]}
