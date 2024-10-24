@@ -6,7 +6,7 @@ import { useState } from "react";
 import CustomerLayout from "./layouts/customer/CustomerLayout";
 
 function App() {
-  const [role, setRole] = useState("admin");
+  const [role, setRole] = useState("customer");
   return (
     <>
       <Router>
