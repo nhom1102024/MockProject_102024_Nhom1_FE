@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HeaderAdmin from "../../components/admin/header/Header.jsx";
+import HeaderAdmin from "../../components/admin/Header.jsx";
 import "./AddContract.css";
 
 const AddContract = () => {
