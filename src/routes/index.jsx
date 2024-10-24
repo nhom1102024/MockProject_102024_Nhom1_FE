@@ -9,6 +9,13 @@ import ViewContracts from "../pages/customer/contract/ViewContracts";
 import ViewHolidays from "../pages/customer/holiday/ViewHolidays";
 import Home from "../pages/home/Home";
 import Candidates from "../pages/admin/candidates/Candidates";
+import ListEmployeeContract from "../pages/Contract/ListEmployeeContract";
+import EditContract from "../pages/Contract/EditContract";
+import AddContract from "../pages/Contract/AddContract";
+import RentAnApartment from "../pages/rentanapartment/RentAnApartment";
+import CustomerHome from "../pages/customerhome/CustomerHome";
+import ViewFinesList from "../pages/fines/ViewFinesList";
+import FineDetail from "../pages/fines/FineDetail";
 
 export const adminRoutes = [
   { path: "/", component: Home },
@@ -17,6 +24,9 @@ export const adminRoutes = [
   { path: "/employee/edit/:id", component: EditEmployee },
   { path: "/dayoff", component: Dayoff },
   { path: "/candidates", component: Candidates },
+  { path: "/list-employee-contract", component: ListEmployeeContract },
+  { path: "/edit-contract/:id", component: EditContract },
+  { path: "/add-contract", component: AddContract },
 ];
 
 export const publicRoutes = [
@@ -26,4 +36,7 @@ export const publicRoutes = [
   { path: "/contract/add", component: Addcontract },
   { path: "/contract/edit/:id", component: Editcontract },
   { path: "/holiday", component: ViewHolidays },
+  { path: "/rent-anapartment", component: RentAnApartment },
+  { path: "/view-fines-list", component: ViewFinesList },
+  { path: "/fine-detail/:id", component: FineDetail },
 ];

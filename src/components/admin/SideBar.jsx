@@ -75,6 +75,7 @@ function SideBarAdmin() {
       ],
     },
   ];
+
   return (
     <div className="sidebar">
       <Menu
