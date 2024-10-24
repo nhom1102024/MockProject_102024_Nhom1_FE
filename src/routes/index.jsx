@@ -25,6 +25,9 @@ import EditMaintenanceRoom from "../pages/staff/apartment/EditMaintenanceRoom";
 import ListService from "../pages/staff/services/ListService";
 import AddService from "../pages/staff/services/AddService";
 import EditService from "../pages/staff/services/EditService";
+// import Profile from "../pages/customer/EditProfile/Profile";
+// import UtilityList from "../pages/customer/RegisterUtilities/UtilityList";
+// import ComplaintList from "../pages/customer/RequestMaintenance/ComplaintList";
 
 export const adminRoutes = [
   { path: "/", component: Home },
@@ -56,5 +59,7 @@ export const publicRoutes = [
   { path: "/holiday", component: ViewHolidays },
   { path: "/rent-anapartment", component: RentAnApartment },
   { path: "/view-fines-list", component: ViewFinesList },
-  { path: "/fine-detail/:id", component: FineDetail },
+  // { path: "/edit-profile", component: Profile },
+  // { path: "/register-utilities", component: UtilityList },
+  // { path: "/complaint-list", component: ComplaintList },
 ];

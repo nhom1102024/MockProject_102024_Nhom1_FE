@@ -22,6 +22,9 @@ function SideBarCustomer() {
       case "view-fines-list":
         navigate("/view-fines-list");
         break;
+      case "register-utilities":
+        navigate("/register-utilities");
+        break;
       default:
         break;
     }
