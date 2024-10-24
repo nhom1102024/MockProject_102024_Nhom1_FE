@@ -12,16 +12,24 @@ function SideBarAdmin() {
       label: "Home Page",
     },
     {
-      key: "financial",
-      label: "Financial Management",
+      key: "personal",
+      label: "Personal information",
     },
     {
-      key: "humanrsc",
-      label: "Human Resources Management",
+      key: "contract",
+      label: "Contract",
     },
     {
-      key: "asset",
-      label: "Asset Management",
+      key: "request",
+      label: "Request a maintenance",
+    },
+    {
+      key: "register",
+      label: "Register utilities",
+    },
+    {
+      key: "pay",
+      label: "Pay",
       children: [
         {
           key: "g1",
@@ -39,12 +47,8 @@ function SideBarAdmin() {
           label: "Service Contracts",
           children: [
             {
-              key: "list-employee-contract",
-              label: "List Employee Contracts",
-            },
-            {
-              key: "add-contract",
-              label: "Add Contract",
+              key: "view-fines-list",
+              label: "View Fines List",
             },
           ],
         },
@@ -55,6 +59,14 @@ function SideBarAdmin() {
         },
       ],
     },
+    {
+      key: "notification",
+      label: "Notification",
+    },
+    {
+      key: "logout",
+      label: "Log out",
+    },
   ];
 
   // Hàm xử lý sự kiện khi người dùng click vào các mục
@@ -64,6 +76,8 @@ function SideBarAdmin() {
       navigate("/add-contract");
     } else if (e.key === "list-employee-contract") {
       navigate("/list-employee-contract");
+    } else if (e.key === "view-fines-list") {
+      navigate("/view-fines-list"); // Điều hướng đến trang View Fines List
     }
     // Bạn có thể thêm nhiều điều hướng cho các mục khác nếu cần
   };
