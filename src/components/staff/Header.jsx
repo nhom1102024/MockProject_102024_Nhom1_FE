@@ -5,7 +5,7 @@ import "../../assets/css/Header.css";
 
 const { Header } = Layout;
 
-function HeaderCustomer() {
+function HeaderStaff() {
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("role");
@@ -38,7 +38,7 @@ function HeaderCustomer() {
               src="https://placehold.co/100x100?text=NoImage"
               alt=""
             />
-            <p className="header-profile__name">User</p>
+            <p className="header-profile__name">Staff</p>
             <Icon className="header-profile__icon" icon="lsicon:down-filled" />
           </div>
           <div className="header-actions">
@@ -63,4 +63,4 @@ function HeaderCustomer() {
   );
 }
 
-export default HeaderCustomer;
+export default HeaderStaff;
