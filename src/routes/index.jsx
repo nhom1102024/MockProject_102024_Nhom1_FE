@@ -28,6 +28,16 @@ import EditService from "../pages/staff/services/EditService";
 // import Profile from "../pages/customer/EditProfile/Profile";
 // import UtilityList from "../pages/customer/RegisterUtilities/UtilityList";
 // import ComplaintList from "../pages/customer/RequestMaintenance/ComplaintList";
+import Login from "../pages/login/Login";
+import Register from "../pages/register/Register";
+import AcceptMaintenanceRequest from "../pages/staff/schedule/AcceptMaintenanceRequest";
+import ListMaintenance from "../pages/staff/schedule/ListMaintenance";
+import ViewSchedule from "../pages/staff/schedule/ViewSchedule";
+
+export const authenticateRoutes = [
+  { path: "/", component: Login },
+  { path: "/register", component: Register },
+];
 
 export const adminRoutes = [
   { path: "/", component: Home },
@@ -50,7 +60,7 @@ export const adminRoutes = [
   { path: "/staff/services/edit/:id", component: EditService },
 ];
 
-export const publicRoutes = [
+export const customerRoutes = [
   { path: "/", component: CustomerHome },
   { path: "/contract", component: ViewContracts },
   { path: "/contract/detail/:id", component: ContractDetail },
@@ -62,4 +72,11 @@ export const publicRoutes = [
   // { path: "/edit-profile", component: Profile },
   // { path: "/register-utilities", component: UtilityList },
   // { path: "/complaint-list", component: ComplaintList },
+];
+
+export const staffRoutes = [
+  { path: "/", component: Home },
+  { path: "/schedule", component: ListMaintenance },
+  { path: "/schedule/view", component: ViewSchedule },
+  { path: "/schedule/:id", component: AcceptMaintenanceRequest },
 ];

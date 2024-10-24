@@ -17,7 +17,7 @@ function Register() {
       );
       if (res) {
         message.success("Register success");
-        navigate("/login");
+        navigate("/");
       } else {
         message.error("Register fail");
       }
