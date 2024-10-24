@@ -9,10 +9,18 @@ function AddEquipment() {
   };
 
   const onFinish = (values) => {
-    const { name } = values;
-    console.log(name);
-
-    console.log(values);
+    const mockApiUrl =
+      "https://67137ecf6c5f5ced66269a9d.mockapi.io/api/listequipment";
+    axios
+      .post(mockApiUrl, values)
+      .then((response) => {
+        console.log("Data added successfully:", response.data);
+        // You can redirect or give feedback to the user after successful submission
+        navigate("/staff/equipment");
+      })
+      .catch((error) => {
+        console.error("There was an error adding the data!", error);
+      });
   };
 
   return (

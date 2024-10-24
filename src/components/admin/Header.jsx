@@ -9,7 +9,7 @@ function HeaderAdmin() {
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("role");
-    navigate(0);
+    navigate("/");
   };
   return (
     <Header className="header">

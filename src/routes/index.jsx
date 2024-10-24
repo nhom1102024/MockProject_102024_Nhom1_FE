@@ -25,9 +25,9 @@ import EditMaintenanceRoom from "../pages/staff/apartment/EditMaintenanceRoom";
 import ListService from "../pages/staff/services/ListService";
 import AddService from "../pages/staff/services/AddService";
 import EditService from "../pages/staff/services/EditService";
-// import Profile from "../pages/customer/EditProfile/Profile";
-// import UtilityList from "../pages/customer/RegisterUtilities/UtilityList";
-// import ComplaintList from "../pages/customer/RequestMaintenance/ComplaintList";
+//  import Profile from "../pages/customer/EditProfile/Profile";
+//  import UtilityList from "../pages/customer/RegisterUtilities/UtilityList";
+//  import ComplaintList from "../pages/customer/RequestMaintenance/ComplaintList";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import AcceptMaintenanceRequest from "../pages/staff/schedule/AcceptMaintenanceRequest";
@@ -49,15 +49,6 @@ export const adminRoutes = [
   { path: "/list-employee-contract", component: ListEmployeeContract },
   { path: "/edit-contract/:id", component: EditContract },
   { path: "/add-contract", component: AddContract },
-  { path: "/staff/equipment", component: ListEquipment },
-  { path: "/staff/equipment/add", component: AddEquipment },
-  { path: "/staff/equipment/edit/:id", component: EditEquipment },
-  { path: "/staff/apartment", component: ListApartment },
-  { path: "/staff/apartment/add", component: AddMaintenanceRoom },
-  { path: "/staff/apartment/edit/:id", component: EditMaintenanceRoom },
-  { path: "/staff/services", component: ListService },
-  { path: "/staff/services/add", component: AddService },
-  { path: "/staff/services/edit/:id", component: EditService },
 ];
 
 export const customerRoutes = [
@@ -69,9 +60,9 @@ export const customerRoutes = [
   { path: "/holiday", component: ViewHolidays },
   { path: "/rent-anapartment", component: RentAnApartment },
   { path: "/view-fines-list", component: ViewFinesList },
-  // { path: "/edit-profile", component: Profile },
-  // { path: "/register-utilities", component: UtilityList },
-  // { path: "/complaint-list", component: ComplaintList },
+  //  { path: "/edit-profile", component: Profile },
+  //  { path: "/register-utilities", component: UtilityList },
+  //  { path: "/complaint-list", component: ComplaintList },
 ];
 
 export const staffRoutes = [
@@ -79,4 +70,13 @@ export const staffRoutes = [
   { path: "/schedule", component: ListMaintenance },
   { path: "/schedule/view", component: ViewSchedule },
   { path: "/schedule/:id", component: AcceptMaintenanceRequest },
+  { path: "/staff/equipment", component: ListEquipment },
+  { path: "/staff/equipment/add", component: AddEquipment },
+  { path: "/staff/equipment/edit/:id", component: EditEquipment },
+  { path: "/staff/apartment", component: ListApartment },
+  { path: "/staff/apartment/add", component: AddMaintenanceRoom },
+  { path: "/staff/apartment/edit/:id", component: EditMaintenanceRoom },
+  { path: "/staff/services", component: ListService },
+  { path: "/staff/services/add", component: AddService },
+  { path: "/staff/services/edit/:id", component: EditService },
 ];

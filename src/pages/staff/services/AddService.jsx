@@ -9,10 +9,17 @@ function AddService() {
   };
 
   const onFinish = (values) => {
-    const { name } = values;
-    console.log(name);
-
-    console.log(values);
+    const mockApiUrl =
+      "https://671919fd7fc4c5ff8f4c710e.mockapi.io/ServiceList";
+    axios
+      .post(mockApiUrl, values)
+      .then((response) => {
+        console.log("Data added successfully:", response.data);
+        navigate("/staff/services");
+      })
+      .catch((error) => {
+        console.error("There was an error adding the data!", error);
+      });
   };
 
   return (

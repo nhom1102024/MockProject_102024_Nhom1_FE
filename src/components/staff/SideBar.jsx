@@ -19,6 +19,18 @@ function SideBarStaff() {
       case "schedule":
         navigate("/schedule");
         break;
+      case "equipment": {
+        navigate("/staff/equipment");
+        break;
+      }
+      case "building": {
+        navigate("/staff/apartment");
+        break;
+      }
+      case "service": {
+        navigate("/staff/services");
+        break;
+      }
       default:
         break;
     }
@@ -50,6 +62,18 @@ function SideBarStaff() {
           key: "technical",
           icon: <RightOutlined />,
           label: "Technical Systems",
+          children: [
+            {
+              key: "equipment",
+              icon: <RightOutlined />,
+              label: "System List",
+            },
+            {
+              key: "service",
+              icon: <RightOutlined />,
+              label: "Service Systems",
+            },
+          ],
         },
         {
           key: "contract",
