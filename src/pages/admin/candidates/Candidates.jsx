@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import "./Candidates.css";
+import "../../../assets/css/Candidates.css";
 import {
   AndroidOutlined,
   PlusOutlined,
@@ -144,7 +144,7 @@ const Candidates = () => {
             <input type="text" placeholder="Enter keywords..." />
             <SearchOutlined />
           </div>
-          <button>
+          <button className="candidate-add">
             <p className="icon">
               <PlusOutlined />
             </p>

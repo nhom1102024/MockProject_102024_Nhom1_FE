@@ -2,7 +2,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom"; // Import useLocation
 import "./RentAnApartment.css";
-import buildingImage from "../../assets/image/building.jpg";
+import buildingImage from "../../../assets/images/building.jpg";
 
 const ApartmentRent = () => {
   const location = useLocation(); // Lấy thông tin location

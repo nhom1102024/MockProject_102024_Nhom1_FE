@@ -74,7 +74,7 @@ const columns = [
 
 function UtilityList() {
   return (
-    <Layout>
+    <Layout style={{ height: "100vh" }}>
       <Content style={{ padding: "20px" }}>
         <div className="utility-list-container">
           <h2>Utility List</h2>

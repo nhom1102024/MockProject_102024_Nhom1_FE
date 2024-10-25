@@ -10,6 +10,7 @@ function HeaderStaff() {
   const handleLogout = () => {
     localStorage.removeItem("role");
     navigate("/");
+    navigate(0);
   };
   return (
     <Header className="header">

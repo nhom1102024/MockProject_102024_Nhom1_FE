@@ -4,15 +4,6 @@
   margin: auto; /* Căn giữa theo chiều ngang */
 }
 
-.content-wrapper {
-  padding: 40px;
-  display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc */
-  min-height: 100vh; /* Chiều cao tối thiểu 100% màn hình */
-  background-color: #f0f2f5; /* Màu nền */
-}
-
 .complaint-table .ant-table {
   background-color: #fff;
 }

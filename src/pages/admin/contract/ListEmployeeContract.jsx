@@ -6,7 +6,7 @@ import deleteIcon from "@iconify/icons-mdi/delete";
 import leftArrowIcon from "@iconify/icons-mdi/arrow-left";
 import rightArrowIcon from "@iconify/icons-mdi/arrow-right";
 import { useNavigate } from "react-router-dom";
-import HeaderAdmin from "../../components/admin/Header.jsx";
+import HeaderAdmin from "../../../components/admin/Header.jsx";
 
 import "./ListEmployeeContract.css";
 

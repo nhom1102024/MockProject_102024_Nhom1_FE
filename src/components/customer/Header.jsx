@@ -7,9 +7,13 @@ const { Header } = Layout;
 
 function HeaderCustomer() {
   const navigate = useNavigate();
+  const handleViewProfile = () => {
+    navigate("/edit-profile");
+  };
   const handleLogout = () => {
     localStorage.removeItem("role");
     navigate("/");
+    navigate(0);
   };
   return (
     <Header className="header">
@@ -51,7 +55,7 @@ function HeaderCustomer() {
               />
               <div className="header-sub-actions">
                 <ul>
-                  <li>Xem hồ sơ</li>
+                  <li onClick={handleViewProfile}>Xem hồ sơ</li>
                   <li onClick={handleLogout}>Đăng xuất</li>
                 </ul>
               </div>

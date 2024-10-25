@@ -120,11 +120,11 @@ const Dayoff = () => {
             />
           </div>
         </div>
-        <div className="employee-search">
+        <div className="dayoff-search">
           <input
             // value={searchValue}
             // onChange={(e) => setSearchValue(e.target.value)}
-            className="employee-search__input"
+            className="dayoff-search__input"
             type="text"
             placeholder="Enter keywords"
           />

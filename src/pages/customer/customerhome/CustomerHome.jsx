@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./CustomerHome.css";
-import buildingImage from "../../assets/image/building.jpg";
+import buildingImage from "../../../assets/images/building.jpg";
 
 const CustomerHome = () => {
   const [apartments, setApartments] = useState([]);

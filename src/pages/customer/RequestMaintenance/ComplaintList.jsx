@@ -98,7 +98,7 @@ const columns = [
 const ComplaintList = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Layout style={{ marginLeft: 200 }}>
+      <Layout>
         <Content className="content-wrapper">
           <div className="complaint-list-container">
             <h2>Maintenance service</h2>
