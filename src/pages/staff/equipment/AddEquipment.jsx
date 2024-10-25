@@ -1,6 +1,7 @@
 import { Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
+import axios from "axios";
 import "./AddEquipment.css";
 function AddEquipment() {
   const navigate = useNavigate();
