@@ -25,9 +25,9 @@ import EditMaintenanceRoom from "../pages/staff/apartment/EditMaintenanceRoom";
 import ListService from "../pages/staff/services/ListService";
 import AddService from "../pages/staff/services/AddService";
 import EditService from "../pages/staff/services/EditService";
-//  import Profile from "../pages/customer/EditProfile/Profile";
-//  import UtilityList from "../pages/customer/RegisterUtilities/UtilityList";
-//  import ComplaintList from "../pages/customer/RequestMaintenance/ComplaintList";
+import Profile from "../pages/customer/EditProfile/Profile";
+import UtilityList from "../pages/customer/RegisterUtilities/UtilityList";
+import ComplaintList from "../pages/customer/RequestMaintenance/ComplaintList";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import AcceptMaintenanceRequest from "../pages/staff/schedule/AcceptMaintenanceRequest";
@@ -60,9 +60,9 @@ export const customerRoutes = [
   { path: "/holiday", component: ViewHolidays },
   { path: "/rent-anapartment", component: RentAnApartment },
   { path: "/view-fines-list", component: ViewFinesList },
-  //  { path: "/edit-profile", component: Profile },
-  //  { path: "/register-utilities", component: UtilityList },
-  //  { path: "/complaint-list", component: ComplaintList },
+  { path: "/edit-profile", component: Profile },
+  { path: "/registerUtil", component: UtilityList },
+  { path: "/complaint-list", component: ComplaintList },
 ];
 
 export const staffRoutes = [
