@@ -114,6 +114,12 @@ function ListApartment() {
                   style={{ width: 800 }}
                   layout={"horizontal"}
                   autoComplete="off"
+                  initialValues={{
+                    status: "occupied",
+                    area: "Toronto",
+                    price: "1000",
+                    tenant: "John Doe",
+                  }}
                 >
                   <div className="row">
                     <div className="col">
