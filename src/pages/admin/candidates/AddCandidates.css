@@ -1,0 +1,68 @@
+.title-add-candidates {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 40px;
+  font-weight: 600;
+}
+.add-candidates {
+  padding: 25px;
+  background-color: #fff;
+  justify-content: center;
+  display: flex;
+  margin-left: 35px;
+  height: 558px;
+  width: 95%;
+  border-radius: 25px 0 0;
+  box-shadow: black 5px;
+}
+
+h3 {
+  font-weight: bold;
+}
+.image-input {
+  display: flex;
+  float: left;
+  flex-direction: column;
+  width: 250px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.image-input form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed blue;
+  height: 150px;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.sec-file-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #e9f0ff;
+}
+.upload-content {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.text-p p {
+  white-space: nowrap; /* Không cho phép xuống dòng */
+  overflow: hidden; /* Ẩn phần nội dung vượt quá */
+  text-overflow: ellipsis; /* Thêm dấu ba chấm (...) khi nội dung vượt quá */
+  max-width: 150px; /* Giới hạn chiều rộng tối đa cho phần tên tệp */
+  margin: 0;
+}
+
+.button-can {
+  float: right;
+}
+.icon-cloud {
+  font-size: 60px;
+  color: #1475cf;
+}

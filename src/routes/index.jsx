@@ -33,6 +33,7 @@ import Register from "../pages/register/Register";
 import AcceptMaintenanceRequest from "../pages/staff/schedule/AcceptMaintenanceRequest";
 import ListMaintenance from "../pages/staff/schedule/ListMaintenance";
 import ViewSchedule from "../pages/staff/schedule/ViewSchedule";
+import AddCandidates from "../pages/admin/candidates/AddCandidates";
 
 export const authenticateRoutes = [
   { path: "/", component: Login },
@@ -46,6 +47,7 @@ export const adminRoutes = [
   { path: "/employee/edit/:id", component: EditEmployee },
   { path: "/dayoff", component: Dayoff },
   { path: "/candidates", component: Candidates },
+  { path: "/add-candidates", component: AddCandidates },
   { path: "/list-employee-contract", component: ListEmployeeContract },
   { path: "/edit-contract/:id", component: EditContract },
   { path: "/add-contract", component: AddContract },

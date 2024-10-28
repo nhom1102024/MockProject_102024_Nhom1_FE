@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import "../../../assets/css/Candidates.css";
-import {
-  AndroidOutlined,
-  PlusOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
+import { AndroidOutlined, PlusOutlined } from "@ant-design/icons";
 import { Button, Form, Modal, Space, Table, Input } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const Candidates = () => {
+  const navigate = useNavigate();
   const [form] = Form.useForm();
   const [clientReady, setClientReady] = useState(false);
   // To disable submit button at the beginning.
@@ -27,6 +25,10 @@ const Candidates = () => {
   };
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+
+  const handleAddCandidadtes = () => {
+    navigate("/add-candidates");
   };
 
   const columns = [
@@ -149,7 +151,7 @@ const Candidates = () => {
               placeholder="Enter keywords..."
             />
           </div>
-          <button className="candidate-add">
+          <button className="candidate-add" onClick={handleAddCandidadtes}>
             <p className="icon">
               <PlusOutlined />
             </p>
