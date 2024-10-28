@@ -140,9 +140,14 @@ const Candidates = () => {
       <div className="candidate">
         <h3>List of Candidates</h3>
         <div className="search-box">
-          <div className="box">
-            <input type="text" placeholder="Enter keywords..." />
-            <SearchOutlined />
+          <div className="candidates-search">
+            <input
+              // value={searchValue}
+              // onChange={(e) => setSearchValue(e.target.value)}
+              className="candidates-search__input"
+              type="text"
+              placeholder="Enter keywords..."
+            />
           </div>
           <button className="candidate-add">
             <p className="icon">
@@ -151,6 +156,7 @@ const Candidates = () => {
             Add
           </button>
         </div>
+
         <div className="table">
           <Table columns={columns} dataSource={data} />
         </div>

@@ -126,7 +126,7 @@ const Dayoff = () => {
             // onChange={(e) => setSearchValue(e.target.value)}
             className="dayoff-search__input"
             type="text"
-            placeholder="Enter keywords"
+            placeholder="Enter keywords..."
           />
         </div>
         <div>
