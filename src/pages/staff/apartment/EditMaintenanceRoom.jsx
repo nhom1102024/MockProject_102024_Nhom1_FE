@@ -88,7 +88,7 @@ function EditMaintenanceRoom() {
               >
                 Return
               </button>
-              <button className="maintenance-room-btn">Confirm</button>
+              <button className="maintenance-room-btn">Save</button>
             </div>
           </Form>
         </div>
