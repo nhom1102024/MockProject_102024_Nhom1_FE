@@ -56,7 +56,7 @@ function ViewSchedule() {
               onChange={(e) => setSearchValue(e.target.value)}
               className="maintenance-search__input"
               type="text"
-              placeholder="Enter keywords"
+              placeholder="Enter keywords..."
             />
             <button
               className="maintenance-search__return"
@@ -75,9 +75,34 @@ function ViewSchedule() {
                 headerRender={({ value }) => {
                   const currentMonth = dayjs(value).format("MMMM");
                   const currentYear = dayjs(value).format("YYYY");
+                  const weekDays = [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                  ];
                   return (
                     <div style={{ padding: 10, textAlign: "center" }}>
                       <h2>{`${currentMonth} ${currentYear}`}</h2>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          paddingTop: 10,
+                        }}
+                      >
+                        {weekDays.map((day, index) => (
+                          <div
+                            key={index}
+                            style={{ width: "14.28%", textAlign: "center" }}
+                          >
+                            {day}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   );
                 }}

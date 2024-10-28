@@ -66,3 +66,7 @@
   font-weight: 300;
   color: #374a67;
 }
+
+.ant-picker-content thead {
+  display: none;
+}

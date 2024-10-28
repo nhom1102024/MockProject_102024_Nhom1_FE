@@ -156,7 +156,7 @@ function ViewContracts() {
               onChange={(e) => setSearchValue(e.target.value)}
               className="contract-search__input"
               type="text"
-              placeholder="Enter keywords"
+              placeholder="Enter keywords..."
             />
           </div>
 

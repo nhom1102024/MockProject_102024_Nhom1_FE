@@ -95,7 +95,7 @@ function ListMaintenance() {
             <input
               className="maintenance-search__input"
               type="text"
-              placeholder="Enter keywords"
+              placeholder="Enter keywords..."
             />
           </div>
 

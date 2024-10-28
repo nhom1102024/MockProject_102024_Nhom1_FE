@@ -169,7 +169,7 @@ function ListEmployee() {
               onChange={(e) => setSearchValue(e.target.value)}
               className="employee-search__input"
               type="text"
-              placeholder="Enter keywords"
+              placeholder="Enter keywords..."
             />
           </div>
 
